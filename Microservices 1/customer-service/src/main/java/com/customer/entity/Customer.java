@@ -22,7 +22,7 @@ public class Customer {
 	private Long contactNo;
 	private String address;
 	private boolean isDeleted;
-	
+	//Constructor
 	public Customer() {
 		this.isDeleted=false;
 	}
