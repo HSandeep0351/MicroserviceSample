@@ -23,12 +23,12 @@ public class CustomerController {
 	
 	@GetMapping("/test")
 	public ResponseEntity<String> test(){
-		return ResponseEntity.ok("Shubhyaa");
+		return ResponseEntity.ok("Shubham Bhoknal");
 	}
 	@PostMapping("/add")
 	public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer){
-		Customer customerAdded=customerDAO.addCustomer(customer);
-		return ResponseEntity.ok(customerAdded);
+		Customer customerAdd=customerDAO.addCustomer(customer);
+		return ResponseEntity.ok(customerAdd);
 	}
 	
 	@GetMapping("/id/{customerId}")
