@@ -1,0 +1,31 @@
+package com.customer.DAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.customer.entity.Customer;
+import com.customer.repository.CustomerRepository;
+@Repository
+public class CustomerDAOImpl implements CustomerDAO {
+	
+    private final CustomerRepository customerRepository;
+	
+	@Autowired
+	public CustomerDAOImpl(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
+
+	
+	public Customer addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		return customerRepository.saveAndFlush(customer);
+	}
+
+
+	@Override
+	public Customer viewCustomer(Long customerId) {
+		// TODO Auto-generated method stub
+		return customerRepository.getById(customerId);
+	}
+
+}

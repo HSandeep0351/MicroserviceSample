@@ -1,0 +1,13 @@
+package com.customer.controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/one")
+public class OneController {
+	@GetMapping("/test")
+	public ResponseEntity<String> test(){
+		return ResponseEntity.ok("Shubhyaa");
+	}
+}
